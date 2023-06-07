@@ -29,7 +29,7 @@ export default defineConfig({
     emptyOutDir: false,
     outDir: resolve(__dirname, 'dist'), // 指定输出路径
     lib: {
-      name: 'hashStacsUI',
+      name: 'MYtestUi',
       entry: [
         resolve(__dirname, 'packages/components/index.ts'),
         resolve(__dirname, 'packages/my-test-ui/index.ts'),
