@@ -3,9 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": ["packages/*"],
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
@@ -15,6 +13,8 @@
     "vue": "^3.2.47"
   },
   "devDependencies": {
+    "@my-test-ui/components": "workspace:*",
+    "@my-test-ui/helper": "workspace:*",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "typescript": "^5.0.2",

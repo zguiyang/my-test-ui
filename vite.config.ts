@@ -7,7 +7,7 @@ import { resolve } from 'path';
 export default defineConfig({
   resolve: {
     alias: {
-      '@hash-stacs-ui': resolve(__dirname, 'packages'),
+      '@my-test-ui': resolve(__dirname, 'packages'),
     },
   },
   plugins: [
@@ -27,7 +27,7 @@ export default defineConfig({
     chunkSizeWarningLimit: 2,
     reportCompressedSize: true,
     emptyOutDir: false,
-    outDir: resolve(__dirname, './dist'), // 指定输出路径
+    outDir: resolve(__dirname, 'dist'), // 指定输出路径
     lib: {
       name: 'hashStacsUI',
       entry: [
@@ -37,7 +37,7 @@ export default defineConfig({
       ],
     },
     rollupOptions: {
-      external: [],
+      external: ['vue'],
       output: [
         {
           format: 'es', // 打包模式 https://rollupjs.org/guide/en/#outputformat
@@ -46,7 +46,7 @@ export default defineConfig({
           dir: 'dist/esm', // 输出路径 https://rollupjs.org/guide/en/#outputdir
           sourcemap: false,
           preserveModules: true, // https://rollupjs.org/guide/en/#outputpreservemodules
-          preserveModulesRoot: resolve('packages', 'my-test-ui'),
+          preserveModulesRoot: resolve('./packages', 'my-test-ui'),
           globals: {
             vue: 'Vue',
           },
@@ -58,7 +58,7 @@ export default defineConfig({
           dir: 'dist/lib',
           sourcemap: false,
           preserveModules: true,
-          preserveModulesRoot: resolve('packages', 'my-test-ui'),
+          preserveModulesRoot: resolve('./packages', 'my-test-ui'),
           globals: {
             vue: 'Vue',
           },
