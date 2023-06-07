@@ -9,10 +9,10 @@ importers:
         version: 3.3.4
     devDependencies:
       '@my-test-ui/components':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:packages/components
       '@my-test-ui/helper':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:packages/helper
       '@vitejs/plugin-vue':
         specifier: ^4.1.0
